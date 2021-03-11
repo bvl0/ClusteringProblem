@@ -11,13 +11,16 @@ int main(int argc, char** argv){
   FILE *file= fopen(fileName,"r");
   int quantLinhas,quantCoordenadas=0;
   ponto** pontos;
+  distancia** distancias;
 
   //le as entradas do arquivo e retorna 
   pontos = leEntradas(file,pontos);
   int i=0;
   
-  // quantCoordenadas = contaCoordenada(file);
+  quantCoordenadas = contaCoordenada(file);
   quantLinhas = contaLinhas(file);
+
+  distancias = calculaDistancias(pontos,quantLinhas,quantCoordenadas);
 
   // for(int i=0; i< quantLinhas; i++){
   //   puts(pontos[i]->nome);

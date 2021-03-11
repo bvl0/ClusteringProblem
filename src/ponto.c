@@ -21,3 +21,7 @@ void destroiPonto(ponto* ponto){
   free(ponto -> coordenadas);
   free(ponto);
 }
+
+double* coordenadas(ponto* ponto){
+  return ponto->coordenadas;
+}

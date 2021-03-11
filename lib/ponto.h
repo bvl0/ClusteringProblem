@@ -12,4 +12,5 @@ typedef struct ponto {
 
 ponto* criaPonto(char* nome,double *pontos);
 void destroiPonto(ponto* ponto);
+double* coordenadas(ponto* ponto);
 #endif // !PONTO_H_
