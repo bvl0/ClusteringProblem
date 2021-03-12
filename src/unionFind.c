@@ -1,10 +1,6 @@
 #include"../lib/unionFind.h"
 //codigo baseadissimo no slide hehe
-typedef struct capsulaUf{
-  int posicaoVetOriginal;
-  int tamanho;
-  int raiz;
-}capsulaUf;
+
 
 capsulaUf** UF_init(int tamanho) {
   capsulaUf** vetorUf = malloc(tamanho*sizeof(capsulaUf*));

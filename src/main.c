@@ -4,6 +4,7 @@
 #include"../lib/ponto.h"
 #include"../lib/entradas.h"
 #include"../lib/distancia.h"
+#include"../lib/unionFind.h"
 
 int main(int argc, char** argv){
   //definição da maioria das variaveis
@@ -12,6 +13,7 @@ int main(int argc, char** argv){
   int quantLinhas,quantCoordenadas=0;
   ponto** pontos;
   distancia** distancias;
+  capsulaUf** vetorUf;
 
   //le as entradas do arquivo e retorna 
   pontos = leEntradas(file,pontos);
@@ -40,7 +42,7 @@ int main(int argc, char** argv){
 
   printaDistancias(distancias,quantLinhas,quantCoordenadas);
 
-
+  vetorUf = UF_init(tamanho);
 
   destroiDistancias(distancias,quantLinhas,quantCoordenadas);
   free(pontos);
