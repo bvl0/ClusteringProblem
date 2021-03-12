@@ -34,8 +34,15 @@ int main(int argc, char** argv){
     destroiPonto(pontos[i]);
     printf("%i \n", i);
   }
+  // printaDistancias(distancias,quantLinhas,quantCoordenadas);
+  int tamanho = ((quantLinhas*(quantLinhas - 1))/2 );
+  qsort(distancias,tamanho,sizeof(distancia*),sort);
+
+  printaDistancias(distancias,quantLinhas,quantCoordenadas);
 
 
+
+  destroiDistancias(distancias,quantLinhas,quantCoordenadas);
   free(pontos);
   fclose(file);
 }
