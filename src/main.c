@@ -5,6 +5,7 @@
 #include"../lib/entradas.h"
 #include"../lib/distancia.h"
 #include"../lib/unionFind.h"
+#include"../lib/kruskall.h"
 
 int main(int argc, char** argv){
   //definição da maioria das variaveis
@@ -14,7 +15,7 @@ int main(int argc, char** argv){
   ponto** pontos;
   distancia** distancias;
   capsulaUf** vetorUf;
-
+  int k = argv[2];
   //le as entradas do arquivo e retorna 
   pontos = leEntradas(file,pontos);
   int i=0;
@@ -42,7 +43,10 @@ int main(int argc, char** argv){
 
   printaDistancias(distancias,quantLinhas,quantCoordenadas);
 
-  vetorUf = UF_init(tamanho);
+  vetorUf = UF_init(quantLinhas);
+  kruskall(vetorUf,quantLinhas,distancias);
+  tiraK(vetorUf,k,quantLinhas);
+  tamanho= tamanho-k;
 
   destroiDistancias(distancias,quantLinhas,quantCoordenadas);
   free(pontos);

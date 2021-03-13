@@ -25,9 +25,9 @@ int UF_find(int i, capsulaUf** vetorUf) {
   return i; // Profundidade de i acessos.
 }
 
-void UF_union(capsulaUf* p, capsulaUf* q, capsulaUf** vetorUf) {
-  int i = UF_find(p->raiz,vetorUf); // Modifique raiz de p para a raiz de q.
-  int j = UF_find(q->raiz,vetorUf); // Profundidade de p+q acessos.
+void UF_union(int p, int q, capsulaUf** vetorUf) {
+  int i = UF_find(p,vetorUf); // Modifique raiz de p para a raiz de q.
+  int j = UF_find(q,vetorUf); // Profundidade de p+q acessos.
 
   if (i == j) return;
   if (vetorUf[i]->tamanho < vetorUf[j]->tamanho) { 
@@ -38,4 +38,35 @@ void UF_union(capsulaUf* p, capsulaUf* q, capsulaUf** vetorUf) {
     vetorUf[j]->raiz = i; 
     vetorUf[i]->tamanho += vetorUf[j]->tamanho; 
   }
+};
+
+
+void UF_free(capsulaUf *capsula){
+  if (capsula != NULL){
+      free(capsula);
+  }
 }
+
+void tiraK(capsulaUf** vetorUf, int k, int tamanho){
+  for(int i=0;i<k;i++){
+    capsulaUf *maior;
+    for(int j=0; j<tamanho;j++){
+        maior = vetorUf[j];
+      if(vetorUf[j]->tamanho > maior->tamanho ){
+        maior = vetorUf[j];
+      }
+    UF_free(maior);
+    }
+  }
+}
+
+// void UF_print(capsulaUf **capsulas, ponto** pontos,int tamanho)
+// {
+//     for (int i = 0; i < tamanho; i++)
+//     {
+//         printf("Ponto: %s Raiz: %s\n", capsulas[i]->raiz, pontos[capsulas[i]->posicaoVetOriginal]->nome;
+//     }
+// }
+
+
+int raizUf(capsulaUf)
