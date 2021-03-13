@@ -2,19 +2,20 @@
 //codigo baseadissimo no slide hehe
 
 
-capsulaUf** UF_init(int tamanho) {
+capsulaUf** UF_init(int tamanho, ponto** pontos) {
   capsulaUf** vetorUf = malloc(tamanho*sizeof(capsulaUf*));
   for (int i = 0; i < tamanho; i++) {
-    vetorUf[i] = criaCapsula(i,0,i); // Cada objeto comeca na sua propria componente.
+    vetorUf[i] = criaCapsula(i,0,i,pontos[i]->nome ); // Cada objeto comeca na sua propria componente.
   } // N acessos ao array.
   return vetorUf;
 }
 
-capsulaUf* criaCapsula(int posicao, int tamanho, int raiz){
+capsulaUf* criaCapsula(int posicao, int tamanho, int raiz, char* nome){
   capsulaUf* novaCapsula = malloc(sizeof(capsulaUf));
   novaCapsula->posicaoVetOriginal= posicao;
   novaCapsula->raiz= raiz;
   novaCapsula->tamanho = tamanho;
+  novaCapsula->nome = strdup(nome);
 }
 
 int UF_find(int i, capsulaUf** vetorUf) {
@@ -50,15 +51,50 @@ void UF_free(capsulaUf *capsula){
 void tiraK(capsulaUf** vetorUf, int k, int tamanho){
   for(int i=0;i<k;i++){
     capsulaUf *maior;
+    maior = vetorUf[i];
     for(int j=0; j<tamanho;j++){
-        maior = vetorUf[j];
       if(vetorUf[j]->tamanho > maior->tamanho ){
-        maior = vetorUf[j];
+        capsulaUf* aux = vetorUf[j];
+        vetorUf[j] = vetorUf[tamanho-1];
+        vetorUf[tamanho-1] = aux;
+        maior = vetorUf[tamanho-1];
       }
+      
+    tamanho --;
     UF_free(maior);
     }
   }
 }
+
+capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k){
+  capsulaUf*** matrizUf = malloc(k*sizeof(capsulaUf**));
+  for(int i=0; i< tamanho; i++){
+    int cont1=0;
+    if(vetorUf[i]->raiz != i){
+      int size = vetorUf[vetorUf[i]->raiz]->tamanho;
+      int cont2=0;
+      for(int j=0; j<tamanho; j++){
+        if(vetorUf[i]->raiz == vetorUf[j]->raiz){
+          matrizUf[cont1][cont2]=vetorUf[j];
+          cont2++;
+        }
+      cont1++;
+      }
+    }
+  }
+  return matrizUf;
+}
+
+int sortUF(const void *a, const void *b){
+  struct capsulaUf *subconjunto1 = *(capsulaUf**)a;
+  struct capsulaUf *subconjunto2 = *(capsulaUf**)a;
+  
+  return strcmp(subconjunto1->nome, subconjunto2->nome);
+
+//  return distA->dist - distb->dist;
+}
+
+
 
 // void UF_print(capsulaUf **capsulas, ponto** pontos,int tamanho)
 // {
@@ -69,4 +105,4 @@ void tiraK(capsulaUf** vetorUf, int k, int tamanho){
 // }
 
 
-int raizUf(capsulaUf)
+// int raizUf(capsulaUf);

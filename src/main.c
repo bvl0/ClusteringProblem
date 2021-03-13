@@ -15,7 +15,8 @@ int main(int argc, char** argv){
   ponto** pontos;
   distancia** distancias;
   capsulaUf** vetorUf;
-  int k = argv[2];
+  capsulaUf*** matrizUf;
+  int k = atoi(argv[2]);
   //le as entradas do arquivo e retorna 
   pontos = leEntradas(file,pontos);
   int i=0;
@@ -32,23 +33,25 @@ int main(int argc, char** argv){
 
   // }
 
+  // printaDistancias(distancias,quantLinhas,quantCoordenadas);
+  int tamanho = ((quantLinhas*(quantLinhas - 1))/2 );
+  qsort(distancias,tamanho,sizeof(distancia*),sort);
+
+  // printaDistancias(distancias,quantLinhas,quantCoordenadas);
+
+  vetorUf = UF_init(quantLinhas, pontos);
+  kruskall(vetorUf,quantLinhas,distancias);
+  tiraK(vetorUf,k,quantLinhas);
+  int tamanhoSemK= quantLinhas-k;
+
+  matrizUf = testeSort(vetorUf,tamanhoSemK, k);
+
   for(int i=0; i< quantLinhas; i++){
       // printf("%lf \n", pontos[i]->coordenadas[0]);
     destroiPonto(pontos[i]);
     printf("%i \n", i);
   }
-  // printaDistancias(distancias,quantLinhas,quantCoordenadas);
-  int tamanho = ((quantLinhas*(quantLinhas - 1))/2 );
-  qsort(distancias,tamanho,sizeof(distancia*),sort);
-
-  printaDistancias(distancias,quantLinhas,quantCoordenadas);
-
-  vetorUf = UF_init(quantLinhas);
-  kruskall(vetorUf,quantLinhas,distancias);
-  tiraK(vetorUf,k,quantLinhas);
-  tamanho= tamanho-k;
-
-  destroiDistancias(distancias,quantLinhas,quantCoordenadas);
+  // destroiDistancias(distancias,quantLinhas,quantCoordenadas);
   free(pontos);
   fclose(file);
 }
