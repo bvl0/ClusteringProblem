@@ -18,6 +18,7 @@ int UF_find(int i, capsulaUf** vetorUf);
 void UF_union(int p, int q, capsulaUf** vetorUf);
 void UF_free(capsulaUf *capsula);
 void tiraK(capsulaUf** vetorUf, int k, int tamanho);
-capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k);
 int sortUF(const void *a, const void *b);
+int sortUFfirst(const void *a, const void *b);
+void testeSort(capsulaUf** vetorUf, int tamanho, int k);
 #endif // !UNIONFIND_H_

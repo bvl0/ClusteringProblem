@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.o CMakeFiles/ClusteringProblem.dir/src/distancia.c.o CMakeFiles/ClusteringProblem.dir/src/kruskall.c.o CMakeFiles/ClusteringProblem.dir/src/main.c.o CMakeFiles/ClusteringProblem.dir/src/ponto.c.o CMakeFiles/ClusteringProblem.dir/src/unionFind.c.o  -o ClusteringProblem  -lm 

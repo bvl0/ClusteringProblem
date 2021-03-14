@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ClusteringProblem"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/icaro/Desktop/ClusteringProblem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/icaro/Desktop/ClusteringProblem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/icaro/Desktop/ClusteringProblem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ClusteringProblem">
+				<Option output="/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/ClusteringProblem" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/icaro/Desktop/ClusteringProblem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/icaro/Desktop/ClusteringProblem/lib"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 ClusteringProblem"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ClusteringProblem/fast">
+				<Option output="/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/ClusteringProblem" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/icaro/Desktop/ClusteringProblem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/icaro/Desktop/ClusteringProblem/lib"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 ClusteringProblem/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/lib/distancia.h">
+			<Option target="ClusteringProblem"/>
+		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/lib/entradas.h">
+			<Option target="ClusteringProblem"/>
+		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/lib/kruskall.h">
+			<Option target="ClusteringProblem"/>
+		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/lib/ponto.h">
+			<Option target="ClusteringProblem"/>
+		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/lib/unionFind.h">
+			<Option target="ClusteringProblem"/>
+		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/src/IO/entradas.c">
+			<Option target="ClusteringProblem"/>
+		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/src/distancia.c">
+			<Option target="ClusteringProblem"/>
+		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/src/kruskall.c">
+			<Option target="ClusteringProblem"/>
+		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/src/main.c">
+			<Option target="ClusteringProblem"/>
+		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/src/ponto.c">
+			<Option target="ClusteringProblem"/>
+		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/src/unionFind.c">
+			<Option target="ClusteringProblem"/>
+		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

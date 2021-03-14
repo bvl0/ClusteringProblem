@@ -6,5 +6,5 @@
 #include"./unionFind.h"
 
 
-void kruskall(capsulaUf** vetorUf,int tamanho,distancia** distancias);
+void kruskall(capsulaUf** vetorUf,int tamanho,distancia** distancias, int k);
 #endif // !KRUSKALL_H_

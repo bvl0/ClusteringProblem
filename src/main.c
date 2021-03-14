@@ -15,7 +15,6 @@ int main(int argc, char** argv){
   ponto** pontos;
   distancia** distancias;
   capsulaUf** vetorUf;
-  capsulaUf*** matrizUf;
   int k = atoi(argv[2]);
   //le as entradas do arquivo e retorna 
   pontos = leEntradas(file,pontos);
@@ -40,17 +39,26 @@ int main(int argc, char** argv){
   // printaDistancias(distancias,quantLinhas,quantCoordenadas);
 
   vetorUf = UF_init(quantLinhas, pontos);
-  kruskall(vetorUf,quantLinhas,distancias);
-  tiraK(vetorUf,k,quantLinhas);
+  int limite = quantLinhas - k; //pra tirar as k-1 arestas;
+  kruskall(vetorUf,tamanho,distancias,limite);
+  // tiraK(vetorUf,k,quantLinhas);
   int tamanhoSemK= quantLinhas-k;
-
-  matrizUf = testeSort(vetorUf,tamanhoSemK, k);
-
-  for(int i=0; i< quantLinhas; i++){
-      // printf("%lf \n", pontos[i]->coordenadas[0]);
-    destroiPonto(pontos[i]);
-    printf("%i \n", i);
+    // for(int g =0 ; g < tamanhoSemK; g++){
+    //     puts(vetorUf[g]->nome);
+    //     printf("%i\n",UF_find( vetorUf[g]->raiz ,vetorUf));
+    // }
+  testeSort(vetorUf,tamanhoSemK, k);
+  for(int g =0 ; g < tamanhoSemK; g++){
+    puts(vetorUf[g]->nome);
+    printf("%i\n",UF_find( vetorUf[g]->raiz ,vetorUf));
   }
+
+
+  // for(int i=0; i< quantLinhas; i++){
+  //     // printf("%lf \n", pontos[i]->coordenadas[0]);
+  //   destroiPonto(pontos[i]);
+  //   printf("%i \n", i);
+  // }
   // destroiDistancias(distancias,quantLinhas,quantCoordenadas);
   free(pontos);
   fclose(file);
