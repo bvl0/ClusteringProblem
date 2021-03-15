@@ -139,7 +139,8 @@ capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k, int *tamanhos){
       qsort(matriz[i],size,sizeof(capsulaUf*),lexo);
     }
   }
-   sortnamao(matriz,k,tamanhos);
+  free(marcados);
+  sortnamao(matriz,k,tamanhos);
   return matriz;
 }
 

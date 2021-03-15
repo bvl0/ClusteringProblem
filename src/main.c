@@ -29,48 +29,27 @@ int main(int argc, char** argv){
 
   distancias = calculaDistancias(pontos,quantLinhas,quantCoordenadas);
 
-  // for(int i=0; i< quantLinhas; i++){
-  //   puts(pontos[i]->nome);
-  //   printf("%lf \n", pontos[i]->coordenadas[0]);
-  //   printf("%lf \n", pontos[i]->coordenadas[1]);
-
-  // }
-
-  // printaDistancias(distancias,quantLinhas,quantCoordenadas);
   int tamanho = ((quantLinhas*(quantLinhas - 1))/2 );
   qsort(distancias,tamanho,sizeof(distancia*),sort);
 
-  // printaDistancias(distancias,quantLinhas,quantCoordenadas);
 
   vetorUf = UF_init(quantLinhas, pontos);
   int limite = quantLinhas - k; //pra tirar as k-1 arestas;
   kruskall(vetorUf,tamanho,distancias,limite);
+  destroiDistancias(distancias,quantLinhas,quantCoordenadas);
   // tiraK(vetorUf,k,quantLinhas);
   int tamanhoSemK= quantLinhas-k;
-    for(int g =0 ; g < tamanhoSemK; g++){
-        puts(vetorUf[g]->nome);
-        printf("%i\n",UF_find( vetorUf[g]->raiz ,vetorUf));
-    }
   matriz = testeSort(vetorUf,quantLinhas, k, tamanhos);
+  destroiUf(vetorUf, quantLinhas);
   escreveSaida(matriz, tamanhos, saida, k);
-
-  
-  
-  //free pontos
-  //free distancias
-  //free vetoruf
-  //free matriz
-  
   
   for(int i=0; i< quantLinhas; i++){
-      // printf("%lf \n", pontos[i]->coordenadas[0]);
     destroiPonto(pontos[i]);
-    printf("%i \n", i);
   }
 
-  destroiUf(vetorUf, quantLinhas);
+  
   destroiMatriz(matriz,tamanhos,k);
-  destroiDistancias(distancias,quantLinhas,quantCoordenadas);
+  
   free(tamanhos);
   free(pontos);
   fclose(file);
