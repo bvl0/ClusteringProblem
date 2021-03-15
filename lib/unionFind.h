@@ -4,6 +4,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include"./distancia.h"
+#include<string.h>
 
 typedef struct capsulaUf{
   int posicaoVetOriginal;
@@ -20,5 +21,10 @@ void UF_free(capsulaUf *capsula);
 void tiraK(capsulaUf** vetorUf, int k, int tamanho);
 int sortUF(const void *a, const void *b);
 int sortUFfirst(const void *a, const void *b);
-void testeSort(capsulaUf** vetorUf, int tamanho, int k);
+// capsulaUf** lexo(capsulaUf** vetorUf, int i, int j);
+int lexo(const void *a, const void *b);
+capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k, int *tamanhos);
+void destroiUf(capsulaUf **vetorUf, int quantLinhas);
+void destroiMatriz(capsulaUf*** matriz,int *tamanhos, int k);
+
 #endif // !UNIONFIND_H_

@@ -1,0 +1,12 @@
+6: n = 10; k = 3; m = 2
+7: n = 10; k = 3; m = 2
+8: n = 5000; k = 10; m = 5
+9: n = 10000; k = 42; m = 5
+
+O casp 6.txt é o mesmo exemplo do trabalho, porém modificado a ordem. 
+Ele foi criado para verificar se a ordem dos grupos permaneceram a mesma.
+
+O caso 7.txt possui o mesmo tamanho do 
+
+O caso 8.txt e 9.txt foram feitos para verificarem tempo e não possuem clusters bem definidos.
+

@@ -11,7 +11,9 @@ add_executable(ClusteringProblem
     lib/kruskall.h
     lib/ponto.h
     lib/unionFind.h
+    lib/saida.h
     src/IO/entradas.c
+    src/IO/saida.c
     src/distancia.c
     src/kruskall.c
     src/main.c

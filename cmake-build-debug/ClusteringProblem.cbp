@@ -92,10 +92,16 @@
 		<Unit filename="/home/icaro/Desktop/ClusteringProblem/lib/ponto.h">
 			<Option target="ClusteringProblem"/>
 		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/lib/saida.h">
+			<Option target="ClusteringProblem"/>
+		</Unit>
 		<Unit filename="/home/icaro/Desktop/ClusteringProblem/lib/unionFind.h">
 			<Option target="ClusteringProblem"/>
 		</Unit>
 		<Unit filename="/home/icaro/Desktop/ClusteringProblem/src/IO/entradas.c">
+			<Option target="ClusteringProblem"/>
+		</Unit>
+		<Unit filename="/home/icaro/Desktop/ClusteringProblem/src/IO/saida.c">
 			<Option target="ClusteringProblem"/>
 		</Unit>
 		<Unit filename="/home/icaro/Desktop/ClusteringProblem/src/distancia.c">

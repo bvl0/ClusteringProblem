@@ -170,6 +170,33 @@ src/IO/entradas.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClusteringProblem.dir/build.make CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.s
 .PHONY : src/IO/entradas.c.s
 
+src/IO/saida.o: src/IO/saida.c.o
+
+.PHONY : src/IO/saida.o
+
+# target to build an object file
+src/IO/saida.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClusteringProblem.dir/build.make CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o
+.PHONY : src/IO/saida.c.o
+
+src/IO/saida.i: src/IO/saida.c.i
+
+.PHONY : src/IO/saida.i
+
+# target to preprocess a source file
+src/IO/saida.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClusteringProblem.dir/build.make CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.i
+.PHONY : src/IO/saida.c.i
+
+src/IO/saida.s: src/IO/saida.c.s
+
+.PHONY : src/IO/saida.s
+
+# target to generate assembly for a file
+src/IO/saida.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClusteringProblem.dir/build.make CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.s
+.PHONY : src/IO/saida.c.s
+
 src/distancia.o: src/distancia.c.o
 
 .PHONY : src/distancia.o
@@ -317,6 +344,9 @@ help:
 	@echo "... src/IO/entradas.o"
 	@echo "... src/IO/entradas.i"
 	@echo "... src/IO/entradas.s"
+	@echo "... src/IO/saida.o"
+	@echo "... src/IO/saida.i"
+	@echo "... src/IO/saida.s"
 	@echo "... src/distancia.o"
 	@echo "... src/distancia.i"
 	@echo "... src/distancia.s"

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.o"
+  "CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o"
   "CMakeFiles/ClusteringProblem.dir/src/distancia.c.o"
   "CMakeFiles/ClusteringProblem.dir/src/kruskall.c.o"
   "CMakeFiles/ClusteringProblem.dir/src/main.c.o"

@@ -5,6 +5,12 @@ CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.o: ../lib/entradas.h
 CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.o: ../lib/ponto.h
 CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.o: ../src/IO/entradas.c
 
+CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o: ../lib/distancia.h
+CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o: ../lib/ponto.h
+CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o: ../lib/saida.h
+CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o: ../lib/unionFind.h
+CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o: ../src/IO/saida.c
+
 CMakeFiles/ClusteringProblem.dir/src/distancia.c.o: ../lib/distancia.h
 CMakeFiles/ClusteringProblem.dir/src/distancia.c.o: ../lib/ponto.h
 CMakeFiles/ClusteringProblem.dir/src/distancia.c.o: ../src/distancia.c
@@ -19,6 +25,7 @@ CMakeFiles/ClusteringProblem.dir/src/main.c.o: ../lib/distancia.h
 CMakeFiles/ClusteringProblem.dir/src/main.c.o: ../lib/entradas.h
 CMakeFiles/ClusteringProblem.dir/src/main.c.o: ../lib/kruskall.h
 CMakeFiles/ClusteringProblem.dir/src/main.c.o: ../lib/ponto.h
+CMakeFiles/ClusteringProblem.dir/src/main.c.o: ../lib/saida.h
 CMakeFiles/ClusteringProblem.dir/src/main.c.o: ../lib/unionFind.h
 CMakeFiles/ClusteringProblem.dir/src/main.c.o: ../src/main.c
 

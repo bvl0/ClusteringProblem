@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/icaro/Desktop/ClusteringProblem/src/IO/entradas.c" "/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.o"
+  "/home/icaro/Desktop/ClusteringProblem/src/IO/saida.c" "/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o"
   "/home/icaro/Desktop/ClusteringProblem/src/distancia.c" "/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles/ClusteringProblem.dir/src/distancia.c.o"
   "/home/icaro/Desktop/ClusteringProblem/src/kruskall.c" "/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles/ClusteringProblem.dir/src/kruskall.c.o"
   "/home/icaro/Desktop/ClusteringProblem/src/main.c" "/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles/ClusteringProblem.dir/src/main.c.o"

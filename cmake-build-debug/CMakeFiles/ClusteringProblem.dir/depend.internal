@@ -5,6 +5,12 @@ CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.o
  /home/icaro/Desktop/ClusteringProblem/lib/entradas.h
  /home/icaro/Desktop/ClusteringProblem/lib/ponto.h
  /home/icaro/Desktop/ClusteringProblem/src/IO/entradas.c
+CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o
+ /home/icaro/Desktop/ClusteringProblem/lib/distancia.h
+ /home/icaro/Desktop/ClusteringProblem/lib/ponto.h
+ /home/icaro/Desktop/ClusteringProblem/lib/saida.h
+ /home/icaro/Desktop/ClusteringProblem/lib/unionFind.h
+ /home/icaro/Desktop/ClusteringProblem/src/IO/saida.c
 CMakeFiles/ClusteringProblem.dir/src/distancia.c.o
  /home/icaro/Desktop/ClusteringProblem/lib/distancia.h
  /home/icaro/Desktop/ClusteringProblem/lib/ponto.h
@@ -20,6 +26,7 @@ CMakeFiles/ClusteringProblem.dir/src/main.c.o
  /home/icaro/Desktop/ClusteringProblem/lib/entradas.h
  /home/icaro/Desktop/ClusteringProblem/lib/kruskall.h
  /home/icaro/Desktop/ClusteringProblem/lib/ponto.h
+ /home/icaro/Desktop/ClusteringProblem/lib/saida.h
  /home/icaro/Desktop/ClusteringProblem/lib/unionFind.h
  /home/icaro/Desktop/ClusteringProblem/src/main.c
 CMakeFiles/ClusteringProblem.dir/src/ponto.c.o

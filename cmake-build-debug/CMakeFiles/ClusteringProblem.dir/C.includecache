@@ -16,31 +16,21 @@ math.h
 ponto.h
 /home/icaro/Desktop/ClusteringProblem/lib/ponto.h
 
-/home/icaro/Desktop/ClusteringProblem/lib/entradas.h
+/home/icaro/Desktop/ClusteringProblem/lib/ponto.h
 stdio.h
 -
 stdlib.h
 -
 string.h
 -
-ponto.h
-/home/icaro/Desktop/ClusteringProblem/lib/ponto.h
 
-/home/icaro/Desktop/ClusteringProblem/lib/kruskall.h
+/home/icaro/Desktop/ClusteringProblem/lib/saida.h
 stdlib.h
 -
 stdio.h
 -
 ./unionFind.h
 /home/icaro/Desktop/ClusteringProblem/lib/unionFind.h
-
-/home/icaro/Desktop/ClusteringProblem/lib/ponto.h
-stdio.h
--
-stdlib.h
--
-string.h
--
 
 /home/icaro/Desktop/ClusteringProblem/lib/unionFind.h
 stdlib.h
@@ -49,20 +39,10 @@ stdio.h
 -
 ./distancia.h
 /home/icaro/Desktop/ClusteringProblem/lib/distancia.h
+string.h
+-
 
-/home/icaro/Desktop/ClusteringProblem/src/main.c
-stdio.h
--
-stdlib.h
--
-../lib/ponto.h
-/home/icaro/Desktop/ClusteringProblem/lib/ponto.h
-../lib/entradas.h
-/home/icaro/Desktop/ClusteringProblem/lib/entradas.h
-../lib/distancia.h
-/home/icaro/Desktop/ClusteringProblem/lib/distancia.h
-../lib/unionFind.h
-/home/icaro/Desktop/ClusteringProblem/lib/unionFind.h
-../lib/kruskall.h
-/home/icaro/Desktop/ClusteringProblem/lib/kruskall.h
+/home/icaro/Desktop/ClusteringProblem/src/IO/saida.c
+../../lib/saida.h
+/home/icaro/Desktop/ClusteringProblem/lib/saida.h
 

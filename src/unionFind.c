@@ -19,6 +19,8 @@ capsulaUf* criaCapsula(int posicao, int tamanho, int raiz, char* nome){
 }
 
 int UF_find(int i, capsulaUf** vetorUf) {
+ if(i ==-1)
+     return -1;
   while (i != vetorUf[i]->raiz){
     // printf("raiz %i \n",vetorUf[i]->raiz);
     vetorUf[i]->raiz = vetorUf[vetorUf[i]->raiz]->raiz;
@@ -50,25 +52,6 @@ void UF_free(capsulaUf *capsula){
   }
 }
 
-void tiraK(capsulaUf** vetorUf, int k, int tamanho){
-  for(int i=1;i<k;i++){
-    free(vetorUf[tamanho-i]->nome);
-    free(vetorUf[tamanho-i]);
-    }
-}
-
-void sortMatriz(capsulaUf*** matrizUf, int tamanho, int k){
-  for(int i =0; i<k;i++){
-    //mudar dps pois a raiz vai ser 0 sempre
-    printf("%i \n",matrizUf[i][0]->raiz);
-    int pai = UF_find(matrizUf[i][0]->raiz, matrizUf[i]);
-    printf("%i \n",matrizUf[i][pai]->tamanho);
-    int tamanho = matrizUf[i][pai]->tamanho;
-    qsort(matrizUf[i], tamanho,sizeof(capsulaUf*),sortUF);
-  }
-  // qsort(matrizUf,k,sizeof(matrizUf),sortUFfirst);
-  // qsort(matrizUf, k,sizeof(capsulaUf**),sortUFfirst);
-}
 
 int sortUFfirst(const void *a, const void *b){
   struct capsulaUf *subconjunto1 = **(capsulaUf***)a ;
@@ -84,79 +67,67 @@ int sortUF(const void *a, const void *b){
 //  return distA->dist - distb->dist;
 }
 
-// capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k){
-//   capsulaUf*** matrizUf = malloc(k*sizeof(capsulaUf**));
-  
-//   int const1=0;
-//   for(int f = 0; f< k ; f++){
-//     for(int i=0; i< tamanho; i++){
-//       capsulaUf *aux;
-//       int const2 = 0;
-//       printf("raiz %i",vetorUf[i]->raiz);
-//       if(vetorUf[i]->raiz == i){
-//         capsulaUf** matrizUf[const1] = malloc(vetorUf[i]->tamanho * sizeof(capsulaUf*));
-//         aux=vetorUf[i];
-//         matrizUf[const1][const2] =  vetorUf[i];
-//         puts("salve");
-//       }
-      
-//       // for(int j =0; j<tamanho;j++){
-//       //   if(UF_find(vetorUf[j]->raiz, vetorUf) == aux->raiz && vetorUf[j] != aux);
-//       //   matrizUf[const1][const2]= vetorUf[j];
-//       //   const2++;
-//       // }
-//       if(vetorUf[i]->raiz == i)
-//         const1= const1 + 1;
-      
-//       puts("muito animal");
-//     }
-//   }
-//   // sortMatriz(matrizUf, tamanho, k);
-//   return matrizUf;
-// }
+
 
 int lexo(const void *a, const void *b){
   struct capsulaUf *no1 = *(struct capsulaUf**)a;
   struct capsulaUf *no2 = *(struct capsulaUf**)b;
 
-  if (strcmp(no1->nome, no2->nome) > 0){
-    int aux=0;
-    printf("no 1: %i no 2: %i\n", no1->raiz,no2->raiz);
-    
-    aux = no1->raiz;
-    no1->raiz = no2->raiz;
-    no2->raiz = aux;
-    printf("no 1: %i no 2: %i\n", no1->raiz,no2->raiz);
-    return 1; 
-  }
-  else if(strcmp(no1->nome, no2->nome) < 0){
-    // int aux=0;
-    // printf("no 1: %i no 2: %i\n", no1->raiz,no2->raiz);
-    // aux = no1->raiz;
-    // no1->raiz = no2->raiz;
-    // no2->raiz = aux;
-    // printf("no 1: %i no 2: %i\n", no1->raiz,no2->raiz);
-    return -1; 
-  }
-  else{
-    return 0;
-  }
-}
-
-void testeSort(capsulaUf** vetorUf, int tamanho, int k){
-  qsort(vetorUf,tamanho,sizeof(capsulaUf*),lexo);
-
+  return strcmp(no1->nome,no2->nome);
 }
 
 
+capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k, int *tamanhos){
+  //  qsort(vetorUf,tamanho,sizeof(capsulaUf*),lexo);
+  capsulaUf*** matriz = malloc(k*sizeof(capsulaUf**));
+  int elementos = 0;
+  int quantidade = 0;
+  int *marcados = calloc(tamanho,sizeof(int));
 
-// void UF_print(capsulaUf **capsulas, ponto** pontos,int tamanho)
-// {
-//     for (int i = 0; i < tamanho; i++)
-//     {
-//         printf("Ponto: %s Raiz: %s\n", capsulas[i]->raiz, pontos[capsulas[i]->posicaoVetOriginal]->nome;
-//     }
-// }
+ for(int i=0; i<tamanho ;i++){
+    //sempre quando achar a raiz tranformar a raiz de todos nos em -1;
+    if(marcados[UF_find(vetorUf[i]->raiz,vetorUf)] != 1 && UF_find(vetorUf[i]->raiz,vetorUf) == vetorUf[i]->raiz){
+      int size= vetorUf[UF_find(vetorUf[i]->raiz,vetorUf)]->tamanho;
+      matriz[elementos]= malloc(size*sizeof(capsulaUf*));
+      quantidade = 0;
+      for(int j = 0; j<tamanho;j++){
+        if(vetorUf[j]->raiz == UF_find(vetorUf[i]->raiz,vetorUf)){
+          matriz[elementos][quantidade]=criaCapsula(vetorUf[j]->posicaoVetOriginal,vetorUf[j]->tamanho,vetorUf[j]->raiz,vetorUf[j]->nome);
+          quantidade++;
+        }
+      }
+      for(int j = 0; j<tamanho;j++){
+
+          if(vetorUf[j]->raiz == UF_find(vetorUf[i]->raiz,vetorUf)){
+          marcados[j]=1;
+          }
+      }
+    elementos++;
+    tamanhos[elementos-1]= quantidade;
+    }
+  }
+  for(int i = 0; i < k ; i++){
+    int size = tamanhos[i];
+    for(int x=0; x<size;x++){
+      qsort(matriz[i],size,sizeof(capsulaUf*),lexo);
+    }
+  }
+  qsort(matriz,k,sizeof(capsulaUf**),lexo);
+  return matriz;
+}
 
 
-// int raizUf(capsulaUf);
+
+  void destroiUf(capsulaUf **vetorUf, int quantLinhas){
+    for(int i=0; i<quantLinhas; i++){
+      free(vetorUf[i]->nome);
+      free(vetorUf[i]);
+    }
+    free(vetorUf);
+  }
+  void destroiMatriz(capsulaUf*** matriz,int *tamanhos, int k){
+    for(int i=0; i<k; i++){
+      destroiUf(matriz[k],tamanhos[i]);
+    }
+    free(matriz);
+  }

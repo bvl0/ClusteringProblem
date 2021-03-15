@@ -1,8 +1,4 @@
 /home/icaro/Desktop/clion-2020.3.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/icaro/Desktop/ClusteringProblem
-CMake Error at CMakeLists.txt:7 (target_link_libraries):
-  Cannot specify link libraries for target "teste" which is not built by this
-  project.
-
-
--- Configuring incomplete, errors occurred!
-See also "/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/icaro/Desktop/ClusteringProblem/cmake-build-debug

@@ -90,9 +90,22 @@ CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/icaro/Desktop/ClusteringProblem/src/IO/entradas.c -o CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.s
 
+CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o: CMakeFiles/ClusteringProblem.dir/flags.make
+CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o: ../src/IO/saida.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o   -c /home/icaro/Desktop/ClusteringProblem/src/IO/saida.c
+
+CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/icaro/Desktop/ClusteringProblem/src/IO/saida.c > CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.i
+
+CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/icaro/Desktop/ClusteringProblem/src/IO/saida.c -o CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.s
+
 CMakeFiles/ClusteringProblem.dir/src/distancia.c.o: CMakeFiles/ClusteringProblem.dir/flags.make
 CMakeFiles/ClusteringProblem.dir/src/distancia.c.o: ../src/distancia.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ClusteringProblem.dir/src/distancia.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ClusteringProblem.dir/src/distancia.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ClusteringProblem.dir/src/distancia.c.o   -c /home/icaro/Desktop/ClusteringProblem/src/distancia.c
 
 CMakeFiles/ClusteringProblem.dir/src/distancia.c.i: cmake_force
@@ -105,7 +118,7 @@ CMakeFiles/ClusteringProblem.dir/src/distancia.c.s: cmake_force
 
 CMakeFiles/ClusteringProblem.dir/src/kruskall.c.o: CMakeFiles/ClusteringProblem.dir/flags.make
 CMakeFiles/ClusteringProblem.dir/src/kruskall.c.o: ../src/kruskall.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ClusteringProblem.dir/src/kruskall.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ClusteringProblem.dir/src/kruskall.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ClusteringProblem.dir/src/kruskall.c.o   -c /home/icaro/Desktop/ClusteringProblem/src/kruskall.c
 
 CMakeFiles/ClusteringProblem.dir/src/kruskall.c.i: cmake_force
@@ -118,7 +131,7 @@ CMakeFiles/ClusteringProblem.dir/src/kruskall.c.s: cmake_force
 
 CMakeFiles/ClusteringProblem.dir/src/main.c.o: CMakeFiles/ClusteringProblem.dir/flags.make
 CMakeFiles/ClusteringProblem.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ClusteringProblem.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ClusteringProblem.dir/src/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ClusteringProblem.dir/src/main.c.o   -c /home/icaro/Desktop/ClusteringProblem/src/main.c
 
 CMakeFiles/ClusteringProblem.dir/src/main.c.i: cmake_force
@@ -131,7 +144,7 @@ CMakeFiles/ClusteringProblem.dir/src/main.c.s: cmake_force
 
 CMakeFiles/ClusteringProblem.dir/src/ponto.c.o: CMakeFiles/ClusteringProblem.dir/flags.make
 CMakeFiles/ClusteringProblem.dir/src/ponto.c.o: ../src/ponto.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ClusteringProblem.dir/src/ponto.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ClusteringProblem.dir/src/ponto.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ClusteringProblem.dir/src/ponto.c.o   -c /home/icaro/Desktop/ClusteringProblem/src/ponto.c
 
 CMakeFiles/ClusteringProblem.dir/src/ponto.c.i: cmake_force
@@ -144,7 +157,7 @@ CMakeFiles/ClusteringProblem.dir/src/ponto.c.s: cmake_force
 
 CMakeFiles/ClusteringProblem.dir/src/unionFind.c.o: CMakeFiles/ClusteringProblem.dir/flags.make
 CMakeFiles/ClusteringProblem.dir/src/unionFind.c.o: ../src/unionFind.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ClusteringProblem.dir/src/unionFind.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ClusteringProblem.dir/src/unionFind.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ClusteringProblem.dir/src/unionFind.c.o   -c /home/icaro/Desktop/ClusteringProblem/src/unionFind.c
 
 CMakeFiles/ClusteringProblem.dir/src/unionFind.c.i: cmake_force
@@ -158,6 +171,7 @@ CMakeFiles/ClusteringProblem.dir/src/unionFind.c.s: cmake_force
 # Object files for target ClusteringProblem
 ClusteringProblem_OBJECTS = \
 "CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.o" \
+"CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o" \
 "CMakeFiles/ClusteringProblem.dir/src/distancia.c.o" \
 "CMakeFiles/ClusteringProblem.dir/src/kruskall.c.o" \
 "CMakeFiles/ClusteringProblem.dir/src/main.c.o" \
@@ -168,6 +182,7 @@ ClusteringProblem_OBJECTS = \
 ClusteringProblem_EXTERNAL_OBJECTS =
 
 ClusteringProblem: CMakeFiles/ClusteringProblem.dir/src/IO/entradas.c.o
+ClusteringProblem: CMakeFiles/ClusteringProblem.dir/src/IO/saida.c.o
 ClusteringProblem: CMakeFiles/ClusteringProblem.dir/src/distancia.c.o
 ClusteringProblem: CMakeFiles/ClusteringProblem.dir/src/kruskall.c.o
 ClusteringProblem: CMakeFiles/ClusteringProblem.dir/src/main.c.o
@@ -175,7 +190,7 @@ ClusteringProblem: CMakeFiles/ClusteringProblem.dir/src/ponto.c.o
 ClusteringProblem: CMakeFiles/ClusteringProblem.dir/src/unionFind.c.o
 ClusteringProblem: CMakeFiles/ClusteringProblem.dir/build.make
 ClusteringProblem: CMakeFiles/ClusteringProblem.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable ClusteringProblem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/icaro/Desktop/ClusteringProblem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable ClusteringProblem"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ClusteringProblem.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
