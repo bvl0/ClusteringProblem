@@ -75,6 +75,33 @@ int lexo(const void *a, const void *b){
 
   return strcmp(no1->nome,no2->nome);
 }
+// int lexo2(const void *a, const void *b){
+//   struct capsulaUf *no1 = *(struct capsulaUf**)a;
+//   struct capsulaUf *no2 = *(struct capsulaUf**)b;
+
+//   return strcmp(no1->nome,no2->nome);
+// }
+
+void sortnamao(capsulaUf*** matriz,int k, int* tamanhos){
+int trocado =0;
+while(trocado == 0){
+trocado=1;
+for(int i =0; i <k -1;i++){
+  if(strcmp(matriz[i][0]->nome, matriz[i+1][0]->nome) > 0){
+    capsulaUf** aux = matriz[i+1];
+    int auxt = tamanhos[i+1];
+    
+    matriz[i+1]=matriz[i];
+    tamanhos[i+1]= tamanhos[i];
+    matriz[i] = aux;
+    tamanhos[i]= auxt;
+    trocado=0;
+  }
+  
+}
+
+}
+}
 
 
 capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k, int *tamanhos){
@@ -112,7 +139,7 @@ capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k, int *tamanhos){
       qsort(matriz[i],size,sizeof(capsulaUf*),lexo);
     }
   }
-  qsort(matriz,k,sizeof(capsulaUf**),lexo);
+   sortnamao(matriz,k,tamanhos);
   return matriz;
 }
 
@@ -127,7 +154,7 @@ capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k, int *tamanhos){
   }
   void destroiMatriz(capsulaUf*** matriz,int *tamanhos, int k){
     for(int i=0; i<k; i++){
-      destroiUf(matriz[k],tamanhos[i]);
+      destroiUf(matriz[i],tamanhos[i]);
     }
     free(matriz);
   }

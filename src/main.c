@@ -68,9 +68,9 @@ int main(int argc, char** argv){
     printf("%i \n", i);
   }
 
-  // destroiUf(vetorUf, quantLinhas);
-  // destroiMatriz(matriz,tamanhos,k);
-  // destroiDistancias(distancias,quantLinhas,quantCoordenadas);
+  destroiUf(vetorUf, quantLinhas);
+  destroiMatriz(matriz,tamanhos,k);
+  destroiDistancias(distancias,quantLinhas,quantCoordenadas);
   free(tamanhos);
   free(pontos);
   fclose(file);

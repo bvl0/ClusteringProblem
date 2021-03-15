@@ -23,6 +23,10 @@ int sortUF(const void *a, const void *b);
 int sortUFfirst(const void *a, const void *b);
 // capsulaUf** lexo(capsulaUf** vetorUf, int i, int j);
 int lexo(const void *a, const void *b);
+int lexo2(const void *a, const void *b);
+
+void sortnamao(capsulaUf*** matriz,int k, int* tamanhos);
+
 capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k, int *tamanhos);
 void destroiUf(capsulaUf **vetorUf, int quantLinhas);
 void destroiMatriz(capsulaUf*** matriz,int *tamanhos, int k);

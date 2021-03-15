@@ -24,14 +24,6 @@ stdlib.h
 string.h
 -
 
-/home/icaro/Desktop/ClusteringProblem/lib/saida.h
-stdlib.h
--
-stdio.h
--
-./unionFind.h
-/home/icaro/Desktop/ClusteringProblem/lib/unionFind.h
-
 /home/icaro/Desktop/ClusteringProblem/lib/unionFind.h
 stdlib.h
 -
@@ -42,7 +34,11 @@ stdio.h
 string.h
 -
 
-/home/icaro/Desktop/ClusteringProblem/src/IO/saida.c
-../../lib/saida.h
-/home/icaro/Desktop/ClusteringProblem/lib/saida.h
+/home/icaro/Desktop/ClusteringProblem/src/distancia.c
+../lib/distancia.h
+/home/icaro/Desktop/ClusteringProblem/lib/distancia.h
+
+/home/icaro/Desktop/ClusteringProblem/src/unionFind.c
+../lib/unionFind.h
+/home/icaro/Desktop/ClusteringProblem/lib/unionFind.h
 
