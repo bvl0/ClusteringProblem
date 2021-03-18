@@ -22,6 +22,7 @@ ponto** leEntradas(FILE* file, ponto** pontos){
      
   novosPontos = malloc(quantPontos*sizeof(ponto));
   rewind(file);
+  
   //percorre o arquivo coletando as informações do ponto e guardando no devido lugar
   for(int i =0;i<quantPontos;i++){
     //pega uma linha
@@ -31,6 +32,7 @@ ponto** leEntradas(FILE* file, ponto** pontos){
     char *dataBruta = strtok(linha, ",");
     char **data = malloc((quantCoordenadas +1) *sizeof(char*)); 
     coordenadas = malloc(quantCoordenadas*sizeof(double)); 
+    
     //percorre a String da linha inteira separando em palavras
     int k = 0;
     while(dataBruta != NULL){

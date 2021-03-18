@@ -105,30 +105,26 @@ for(int i =0; i <k -1;i++){
 
 
 capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k, int *tamanhos){
-  //  qsort(vetorUf,tamanho,sizeof(capsulaUf*),lexo);
-  capsulaUf*** matriz = malloc(k*sizeof(capsulaUf**));
+  capsulaUf*** matriz = malloc(k*sizeof(capsulaUf**)); //aloca uma matriz com 1 vetor pra cada subconjunto
   int elementos = 0;
   int quantidade = 0;
-  int *marcados = calloc(tamanho,sizeof(int));
+  int *marcados = calloc(tamanho,sizeof(int)); // pra n repetir o desmembramento em pontos repetidos
 
  for(int i=0; i<tamanho ;i++){
-    //sempre quando achar a raiz tranformar a raiz de todos nos em -1;
-    if(marcados[UF_find(vetorUf[i]->raiz,vetorUf)] != 1 && UF_find(vetorUf[i]->raiz,vetorUf) == vetorUf[i]->raiz){
-      int size= vetorUf[UF_find(vetorUf[i]->raiz,vetorUf)]->tamanho;
+    //se o nó n estiver marcado verifica se ele é uma raiz
+    if(marcados[UF_find(vetorUf[i]->raiz,vetorUf)] != 1 && UF_find(vetorUf[i]->raiz,vetorUf) == vetorUf[i]->raiz ){
+      int size= vetorUf[vetorUf[i]->raiz]->tamanho;// tamanho do vetor = quantidades de nó na arvore
       matriz[elementos]= malloc(size*sizeof(capsulaUf*));
       quantidade = 0;
       for(int j = 0; j<tamanho;j++){
+        //todos os nos com a mesma raiz são copiados pra matriz
         if(vetorUf[j]->raiz == UF_find(vetorUf[i]->raiz,vetorUf)){
           matriz[elementos][quantidade]=criaCapsula(vetorUf[j]->posicaoVetOriginal,vetorUf[j]->tamanho,vetorUf[j]->raiz,vetorUf[j]->nome);
           quantidade++;
+          marcados[j]=1;
         }
       }
-      for(int j = 0; j<tamanho;j++){
 
-          if(vetorUf[j]->raiz == UF_find(vetorUf[i]->raiz,vetorUf)){
-          marcados[j]=1;
-          }
-      }
     elementos++;
     tamanhos[elementos-1]= quantidade;
     }

@@ -9,6 +9,7 @@ distancia* criaDistancia(int posP, int posQ, double dist){
   return novaDistancia;
 }
 distancia** calculaDistancias(ponto** pontos,int quantLinhas, int quantCoordenadas){
+  //aloca o vetor de distancias
   distancia** vetorDistancia = malloc(((quantLinhas*(quantLinhas - 1))/2 )* sizeof(distancia*));
   int distanciasCalculadas= 0;
   double distancia = 0;
