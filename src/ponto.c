@@ -10,7 +10,7 @@ ponto *criaPonto(char* nome,double *coordenadas){
     novoPonto -> coordenadas = coordenadas;
   }else{
     puts("nome invalido");
-    return;
+    exit(1);
   }
 
   return novoPonto;

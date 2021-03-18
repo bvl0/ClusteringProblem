@@ -58,24 +58,32 @@ int main(int argc, char** argv){
   double tempokruskall = ((double)tempo) / CLOCKS_PER_SEC;
 
   destroiDistancias(distancias,quantLinhas,quantCoordenadas);
-  int tamanhoSemK= quantLinhas-k;
   
   //ordenação e preenchimento do arquivo de saida
   tempo = clock();
   
   matriz = testeSort(vetorUf,quantLinhas, k, tamanhos); //provavelmente não é o jeito mais otimizado mas eu tentei de tudo e nada funcionou :(
-  destroiUf(vetorUf, quantLinhas);
-  escreveSaida(matriz, tamanhos, saida, k);
+  //vetor aux pra ordenar os subgrupos entre si
+  out* a = malloc(k*sizeof(out));
+  //preenche o auxiliar com o index e o nome do primeiro elemento dos subgrupos;
+  preencheAux(a, matriz, tamanhos, k);
+  //ordena o vetor auxiliar pra posteriormente printar na posução correta
+  qsort(a,k,sizeof(out),lexo2);
+  escreveSaida(matriz, tamanhos, saida, k, a);
+ 
   
   tempo = clock() -  tempo;
   double temposaida = ((double)tempo) / CLOCKS_PER_SEC;
-
-  printf("Tempo entradas: %lf  | Tempo calculando distancia: %lf | Tempo ordenando distancia: %lf | tempo kruskall: %lf | tempo saida: %lf",tempoEntradas,tempoCalcDist,tempoOrdDist,tempokruskall,temposaida);
+  double total = tempoEntradas+tempoCalcDist+tempoOrdDist+tempokruskall+temposaida;
+  printf("Tempo entradas: %lf  | Tempo calculando distancia: %lf | Tempo ordenando distancia: %lf | tempo kruskall: %lf | tempo saida: %lf | total: %lf",tempoEntradas,tempoCalcDist,tempoOrdDist,tempokruskall,temposaida,total);
   
   //resto dos frees
+  destroiUf(vetorUf, quantLinhas);
   for(int i=0; i< quantLinhas; i++){
     destroiPonto(pontos[i]);
   }
+
+  free(a);
   destroiMatriz(matriz,tamanhos,k);
   free(tamanhos);
   free(pontos);

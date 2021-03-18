@@ -13,8 +13,15 @@ typedef struct capsulaUf{
   char *nome;
 }capsulaUf;
 
+typedef struct out{
+  int vetor;
+  char *nomePrimeiro;
+}out;
+
 capsulaUf** UF_init(int tamanho, ponto** pontos);
 capsulaUf* criaCapsula(int posicao, int tamanho, int raiz, char* nome);
+capsulaUf* copiaCapsula(capsulaUf* a, int posicao, int tamanho, int raiz, char* nome);
+void preencheAux(out* a, capsulaUf*** matriz, int* tamanhos, int k);
 int UF_find(int i, capsulaUf** vetorUf);
 void UF_union(int p, int q, capsulaUf** vetorUf);
 void UF_free(capsulaUf *capsula);

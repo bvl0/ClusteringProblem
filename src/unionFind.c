@@ -16,6 +16,20 @@ capsulaUf* criaCapsula(int posicao, int tamanho, int raiz, char* nome){
   novaCapsula->raiz= raiz;
   novaCapsula->tamanho = tamanho;
   novaCapsula->nome = strdup(nome);
+  return novaCapsula;
+}
+capsulaUf* copiaCapsula(capsulaUf* a, int posicao, int tamanho, int raiz, char* nome){
+  a->posicaoVetOriginal= posicao;
+  a->raiz= raiz;
+  a->tamanho = tamanho;
+  return a;
+}
+
+void preencheAux(out* a, capsulaUf*** matriz, int* tamanhos, int k){
+  for(int j = 0; j<k; j++){
+    a[j].nomePrimeiro = matriz[j][0]->nome;
+    a[j].vetor = j;
+  }
 }
 
 int UF_find(int i, capsulaUf** vetorUf) {
@@ -43,7 +57,7 @@ void UF_union(int p, int q, capsulaUf** vetorUf) {
     vetorUf[j]->raiz = i; 
     vetorUf[i]->tamanho += vetorUf[j]->tamanho; 
   }
-};
+}
 
 
 void UF_free(capsulaUf *capsula){
@@ -75,6 +89,12 @@ int lexo(const void *a, const void *b){
 
   return strcmp(no1->nome,no2->nome);
 }
+
+int lexo2(const void *a, const void *b){
+  struct out *no1 = (struct out*)a;
+  struct out *no2 = (struct out*)b;
+  return strcmp(no1->nomePrimeiro,no2->nomePrimeiro);
+}
 // int lexo2(const void *a, const void *b){
 //   struct capsulaUf *no1 = *(struct capsulaUf**)a;
 //   struct capsulaUf *no2 = *(struct capsulaUf**)b;
@@ -82,25 +102,25 @@ int lexo(const void *a, const void *b){
 //   return strcmp(no1->nome,no2->nome);
 // }
 
-void sortnamao(capsulaUf*** matriz,int k, int* tamanhos){
-  //ordena a matriz pelo primeiro elemento junto do vetor de tamanhos /
-  int trocado =0;
-  while(trocado == 0){
-    trocado=1;
-    for(int i =0; i <k -1;i++){
-      if(strcmp(matriz[i][0]->nome, matriz[i+1][0]->nome) > 0){
-        capsulaUf** aux = matriz[i+1];
-        int auxt = tamanhos[i+1];
+// void sortnamao(capsulaUf*** matriz,int k, int* tamanhos){
+//   //ordena a matriz pelo primeiro elemento junto do vetor de tamanhos /
+//   int trocado =0;
+//   while(trocado == 0){
+//     trocado=1;
+//     for(int i =0; i <k -1;i++){
+//       if(strcmp(matriz[i][0]->nome, matriz[i+1][0]->nome) > 0){
+//         capsulaUf** aux = matriz[i+1];
+//         int auxt = tamanhos[i+1];
         
-        matriz[i+1]=matriz[i];
-        tamanhos[i+1]= tamanhos[i];
-        matriz[i] = aux;
-        tamanhos[i]= auxt;
-        trocado=0;
-      } 
-    }
-  }
-}
+//         matriz[i+1]=matriz[i];
+//         tamanhos[i+1]= tamanhos[i];
+//         matriz[i] = aux;
+//         tamanhos[i]= auxt;
+//         trocado=0;
+//       } 
+//     }
+//   }
+// }
 
 
 
@@ -119,7 +139,7 @@ capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k, int *tamanhos){
       for(int j = 0; j<tamanho;j++){
         //todos os nos com a mesma raiz são copiados pra matriz
         if(vetorUf[j]->raiz == UF_find(vetorUf[i]->raiz,vetorUf)){
-          matriz[elementos][quantidade]=criaCapsula(vetorUf[j]->posicaoVetOriginal,vetorUf[j]->tamanho,vetorUf[j]->raiz,vetorUf[j]->nome);
+          matriz[elementos][quantidade]=vetorUf[j];
           quantidade++;
           marcados[j]=1;
         }
@@ -138,7 +158,10 @@ capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k, int *tamanhos){
     }
   }
   //ordena os subconjuntos pelos primeiros elementos
-  sortnamao(matriz,k,tamanhos); //por algum motivo com qsort e qsort_r aconteceram diversos erros e assim foi o unico jeito funcional :(
+  
+  
+  
+  // sortnamao(matriz,k,tamanhos); //por algum motivo com qsort e qsort_r aconteceram diversos erros e assim foi o unico jeito funcional :(
   return matriz;
 }
 
@@ -153,7 +176,7 @@ capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k, int *tamanhos){
   }
   void destroiMatriz(capsulaUf*** matriz,int *tamanhos, int k){
     for(int i=0; i<k; i++){
-      destroiUf(matriz[i],tamanhos[i]);
+      free(matriz[i]);
     }
     free(matriz);
   }

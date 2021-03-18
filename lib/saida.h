@@ -5,6 +5,6 @@
 #include<stdio.h>
 #include"./unionFind.h"
 
-void escreveSaida(capsulaUf*** matriz, int* tamanhos, char* saida, int k );
+void escreveSaida(capsulaUf*** matriz, int* tamanhos, char* saida, int k, out* a );
 
 #endif // !SAIDA_H_
