@@ -3,7 +3,7 @@
 void kruskall(capsulaUf** vetorUf,int tamanho,distancia** distancias, int limite){
   int pontos=0;
   int contador=0;
-  for(int i =0; i<tamanho && contador < limite;i++){
+  for(int i =0; contador < limite;i++){
     int ponto1 =distancias[i]->posP;
     int ponto2 =distancias[i]->posQ;
       pontos ++;

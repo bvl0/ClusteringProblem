@@ -140,7 +140,7 @@ capsulaUf*** testeSort(capsulaUf** vetorUf, int tamanho, int k, int *tamanhos){
     }
   }
   free(marcados);
-  // sortnamao(matriz,k,tamanhos);
+  sortnamao(matriz,k,tamanhos);
   return matriz;
 }
 

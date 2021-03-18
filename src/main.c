@@ -54,10 +54,10 @@ int main(int argc, char** argv){
   
   tempo = clock();
   matriz = testeSort(vetorUf,quantLinhas, k, tamanhos);
-  double temposaida = ((double)tempo) / CLOCKS_PER_SEC;
   destroiUf(vetorUf, quantLinhas);
   escreveSaida(matriz, tamanhos, saida, k);
   tempo = clock() -  tempo;
+  double temposaida = ((double)tempo) / CLOCKS_PER_SEC;
 
   for(int i=0; i< quantLinhas; i++){
     destroiPonto(pontos[i]);
