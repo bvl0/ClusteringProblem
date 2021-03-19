@@ -80,7 +80,7 @@ int main(int argc, char** argv){
   tempo = clock() -  tempo;
   double temposaida = ((double)tempo) / CLOCKS_PER_SEC;
   
-  double total = tempoEntradas+tempoCalcDist+tempoOrdDist+tempokruskall+temposaida;
+  double total = tempoEntradas+tempoCalcDist+tempoOrdDist+tempokruskall+temposaida+tempogrupos;
   // printf("Tempo entradas: %lf  | Tempo calculando distancia: %lf | Tempo ordenando distancia: %lf | tempo kruskall: %lf | tempo saida: %lf | total: %lf",tempoEntradas,tempoCalcDist,tempoOrdDist,tempokruskall,temposaida,total);
   printf("\n======= TEMPOS =======\n");
   printf("%-27s %lfs\n", "Leitura:", tempoEntradas);
