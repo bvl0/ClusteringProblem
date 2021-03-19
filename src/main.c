@@ -69,13 +69,31 @@ int main(int argc, char** argv){
   preencheAux(a, matriz, tamanhos, k);
   //ordena o vetor auxiliar pra posteriormente printar na posução correta
   qsort(a,k,sizeof(out),lexo2);
-  escreveSaida(matriz, tamanhos, saida, k, a);
+  
+  tempo = clock() - tempo;
+  double tempogrupos = ((double)tempo) / CLOCKS_PER_SEC;
+  
+  tempo = clock();
  
+  escreveSaida(matriz, tamanhos, saida, k, a);
   
   tempo = clock() -  tempo;
   double temposaida = ((double)tempo) / CLOCKS_PER_SEC;
+  
   double total = tempoEntradas+tempoCalcDist+tempoOrdDist+tempokruskall+temposaida;
-  printf("Tempo entradas: %lf  | Tempo calculando distancia: %lf | Tempo ordenando distancia: %lf | tempo kruskall: %lf | tempo saida: %lf | total: %lf",tempoEntradas,tempoCalcDist,tempoOrdDist,tempokruskall,temposaida,total);
+  // printf("Tempo entradas: %lf  | Tempo calculando distancia: %lf | Tempo ordenando distancia: %lf | tempo kruskall: %lf | tempo saida: %lf | total: %lf",tempoEntradas,tempoCalcDist,tempoOrdDist,tempokruskall,temposaida,total);
+  printf("\n======= TEMPOS =======\n");
+  printf("%-27s %lfs\n", "Leitura:", tempoEntradas);
+  printf("%-29s %lfs\n", "Cálculo de distâncias:", tempoCalcDist);
+  printf("%-30s %lfs\n", "Ordenação de distâncias:", tempoOrdDist);
+  printf("%-29s %lfs\n", "Obtenção da MST:", tempokruskall);
+  printf("%-29s %lfs\n", "Identificação de grupos:", tempogrupos);
+  printf("%-27s %lfs\n", "Escrita:", temposaida);
+
+  printf("\n%-27s %lfs\n\n", "TOTAL:", total);
+
+  
+  
   
   //resto dos frees
   destroiUf(vetorUf, quantLinhas);
