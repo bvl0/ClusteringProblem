@@ -29,7 +29,7 @@ $(BUILD_DIR)/%.c.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) */*.o */*.d
+	$(RM) */*.o */*.d 
 
 run: $(TARGET_EXEC)
 	$(BUILD_DIR)/$(TARGET_EXEC) $(ARGS)

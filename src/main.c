@@ -60,9 +60,10 @@ int main(int argc, char** argv){
   destroiDistancias(distancias,quantLinhas,quantCoordenadas);
   
   //ordenação e preenchimento do arquivo de saida
+  //provavelmente não é o jeito mais otimizado mas eu tentei de tudo e nada funcionou :(
   tempo = clock();
   
-  matriz = testeSort(vetorUf,quantLinhas, k, tamanhos); //provavelmente não é o jeito mais otimizado mas eu tentei de tudo e nada funcionou :(
+  matriz = testeSort(vetorUf,quantLinhas, k, tamanhos); 
   //vetor aux pra ordenar os subgrupos entre si
   out* a = malloc(k*sizeof(out));
   //preenche o auxiliar com o index e o nome do primeiro elemento dos subgrupos;
@@ -82,6 +83,8 @@ int main(int argc, char** argv){
   
   double total = tempoEntradas+tempoCalcDist+tempoOrdDist+tempokruskall+temposaida+tempogrupos;
   // printf("Tempo entradas: %lf  | Tempo calculando distancia: %lf | Tempo ordenando distancia: %lf | tempo kruskall: %lf | tempo saida: %lf | total: %lf",tempoEntradas,tempoCalcDist,tempoOrdDist,tempokruskall,temposaida,total);
+  
+  //prints em ordem pra usar o script de montar tabela de testes
   printf("\n======= TEMPOS =======\n");
   printf("%-27s %lfs\n", "Leitura:", tempoEntradas);
   printf("%-29s %lfs\n", "Cálculo de distâncias:", tempoCalcDist);
@@ -89,7 +92,6 @@ int main(int argc, char** argv){
   printf("%-29s %lfs\n", "Obtenção da MST:", tempokruskall);
   printf("%-29s %lfs\n", "Identificação de grupos:", tempogrupos);
   printf("%-27s %lfs\n", "Escrita:", temposaida);
-
   printf("\n%-27s %lfs\n\n", "TOTAL:", total);
 
   
